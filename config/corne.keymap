@@ -47,7 +47,7 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &trans    &trans   &trans &trans   &trans   &trans       &trans            &trans      &trans         &trans    &trans      &kp C_MUTE
-   &kp CAPS  &trans   &trans &trans   &trans   &trans       &kp LOCKING_NUM   &kp HOME    &kp END        &kp PG_UP  &kp PG_DN    &kp C_VOL_UP
+   &kp CAPS  &trans   &trans &trans   &trans   &trans       &kp KP_NUMLOCK   &kp HOME    &kp END        &kp PG_UP  &kp PG_DN    &kp C_VOL_UP
    &kp LSHFT &kp N1   &kp N2 &kp N3   &kp N4   &kp N5       &kp N6            &kp N7      &kp N8         &kp N9     &kp MINUS    &kp C_VOL_DN
                     	     &kp LCTRL &trans   &kp SPACE   &kp RET           &trans      &kp DEL
                         >;
