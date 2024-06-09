@@ -71,7 +71,7 @@
         };
 
 
-/ {
+
     combos {
         compatible = "zmk,combos";
         combo_tab {
@@ -140,7 +140,7 @@
             bindings = <&kp KP_DOT>;
             layers = <0>;
         };                   
-    };
+
 };
 
 };
