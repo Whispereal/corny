@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 / {
         
@@ -155,7 +156,7 @@
         combo_tilde {
             timeout-ms = <50>;
             key-positions = <5 6>;
-            bindings = <&kp TILDE2>;
+            bindings = <&kp UNDER>;
             layers = <0>;
         };     
         combo_grave {
@@ -173,7 +174,13 @@
         combo_poweron {
             timeout-ms = <50>;
             key-positions = <0 5 38>;
-            bindings = <&kp X>;
+            bindings = <&ext_power EP_ON>;
+            layers = <4>;
+        };    
+        combo_poweroff {
+            timeout-ms = <50>;
+            key-positions = <0 17 38>;
+            bindings = <&ext_power EP_OFF>;
             layers = <4>;
         };    
 
