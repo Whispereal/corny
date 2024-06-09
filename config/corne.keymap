@@ -12,7 +12,7 @@
         
 
     macros {
-        macro_underscore: zed_em_kay {
+        macro_underscore: macro_underscore {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -21,7 +21,7 @@
                 , <&macro_release &kp LALT &mo 1>
                 ;
         };
-        macro_multiply: zed_em_kay {
+        macro_multiply: macro_multiply {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
