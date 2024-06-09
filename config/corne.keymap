@@ -9,6 +9,79 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+        
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp TAB>;
+            layers = <0>;
+        };
+        combo_underscore {
+            timeout-ms = <50>;
+            key-positions = <29 30>;
+            bindings = <&kp UNDER>;
+            layers = <0>;
+        };
+        combo_minus {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp KP_MINUS>;
+            layers = <0>;
+        };       
+        combo_LeftBrace {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&kp LBRC>;
+            layers = <0>;
+        };    
+        combo_RightBrace {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <&kp RBRC>;
+            layers = <0>;
+        };        
+        combo_LeftParenthesis {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp LPAR>;
+            layers = <0>;
+        };          
+        combo_RightParenthesis {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp RPAR>;
+            layers = <0>;
+        };   
+        combo_LeftBracket {
+            timeout-ms = <50>;
+            key-positions = <4 5>;
+            bindings = <&kp LBKT>;
+            layers = <0>;
+        };    
+        combo_RightBracket {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp RBKT>;
+            layers = <0>;
+        };
+        combo_equal {
+            timeout-ms = <50>;
+            key-positions = <34 35>;
+            bindings = <&kp EQUAL>;
+            layers = <0>;
+        };  
+        combo_dot {
+            timeout-ms = <50>;
+            key-positions = <33 34>;
+            bindings = <&kp KP_DOT>;
+            layers = <0>;
+        };                   
+    };
+};
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -32,7 +105,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &bt BT_CLR     &trans             &trans             &kp UP              &trans             &kp LBKT           &kp RBKT         &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_DOT          &trans
+   &bt BT_CLR     &trans             &trans             &kp UP              &trans             &kp LBKT           &kp RBKT         &kp KP_N7    &kp KP_N8    &kp KP_N9    &trans          &trans
    &kp CAPS        &trans             &kp LEFT           &kp DOWN            &kp RIGHT          &kp LPAR           &kp RPAR         &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp KP_MULTIPLY     &kp KP_PLUS
    &kp LSHFT      &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2        &bt BT_SEL 3       &bt BT_SEL 4       &kp EQUAL        &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp KP_DIVIDE       &kp KP_MINUS
                           	&kp LCTRL     &trans       &kp SPACE        &kp RET            &trans             &kp KP_N0
