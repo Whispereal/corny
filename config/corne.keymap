@@ -168,15 +168,10 @@
         combo_poweron {
             timeout-ms = <50>;
             key-positions = <0 5 38>;
-            bindings = <&ext_power EP_ON>;
+            bindings = <&kp X>;
             layers = <4>;
         };    
-        combo_poweroff {
-            timeout-ms = <50>;
-            key-positions = <0 17 38>;
-            bindings = <&ext_power EP_OFF>;
-            layers = <4>;
-        }; 
+
 };
 
 };
