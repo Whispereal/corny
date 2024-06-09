@@ -51,7 +51,7 @@
                         bindings = <
    &trans    &trans   &trans &kp UP   &trans   &kp LBKT       &kp RBKT            &trans      &kp KP_NUMLOCK         &trans     &trans       &kp C_MUTE
    &trans  &trans   &kp LEFT &kp DOWN   &kp RIGHT   &kp LPAR       &kp RPAR    &kp HOME    &kp END        &kp PG_UP  &kp PG_DN    &kp C_VOL_UP
-   &kp LSHFT &kp N1   &kp N2 &kp N3   &kp N4   &kp N5       &kp N6            &kp N7      &kp N8         &kp N9     &kp MINUS    &kp C_VOL_DN
+   &kp LSHFT &kp N1   &kp N2 &kp N3   &kp N4   &kp N5       &kp N6            &kp N7      &kp N8         &kp N9     &trans    &kp C_VOL_DN
                     	     &kp LCTRL &trans   &kp SPACE   &kp RET           &trans      &kp DEL
                         >;
                 };
@@ -132,13 +132,13 @@
             timeout-ms = <50>;
             key-positions = <34 35>;
             bindings = <&kp EQUAL>;
-            layers = <0>;
+            layers = <0 1>;
         };  
         combo_dot {
             timeout-ms = <50>;
             key-positions = <33 34>;
             bindings = <&kp KP_DOT>;
-            layers = <0>;
+            layers = <1>;
         };                   
 
 };
