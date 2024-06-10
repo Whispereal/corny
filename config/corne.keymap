@@ -29,7 +29,14 @@
                 , <&macro_tap &kp KP_N2 &kp KP_N1 &kp KP_N5>
                 , <&macro_release &kp LALT &mo 1>
                 ;
-        };        
+        };      
+        macro_todo: macro_todo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp KP_MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE>
+                ;
+        };      
     };
 
         keymap {
@@ -44,7 +51,7 @@
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LALT &kp A &kp S &kp D &lt 3 F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
+   &kp LSHFT &kp Z &kp X &kp C &kp V &lt 5 B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                   &kp LCTRL &mo 1 &kp SPACE   &kp RET &mo 2 &kp RGUI
                         >;
                 };
@@ -88,7 +95,32 @@
                     	     &kp LCTRL &trans   &kp SPACE             &kp RET     &trans      &kp DEL
                         >;
                 };
-
+                lock_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &none    &none   &none &none   &none   &none                 &none      &none      &none         &none     &none    &none
+   &none    &none   &none &none   &none   &none                 &none      &none      &none         &none     &none    &none
+   &none    &none   &none &none   &none   &none                 &none      &none      &none         &none     &none    &none
+                    	  &none &none  &none                    &none     &none       &none
+                        >;
+                };
+                bluetooth_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &none    &none   &none &none   &none   &none                 &none      &none      &none         &none     &none    &none
+   &none    &none   &none &none   &none   &none                 &none      &none      &none         &none     &none    &none
+   &none    &none   &none &none   &none   &none                 &none      &none      &none         &none     &none    &none
+                    	  &none &none  &none                    &none     &none       &none
+                        >;
+                };
         };
 
 
@@ -185,7 +217,59 @@
             bindings = <&macro_multiply>;
             layers = <0>;
         };   
-
+        combo_lock {
+            timeout-ms = <50>;
+            key-positions = <0 5 21 38>;
+            bindings = <&tog 4>;
+        };   
+        combo_LeftBackSpace {
+            timeout-ms = <50>;
+            key-positions = <14 29>;
+            bindings = <&kp BSPC>;
+            layers = <0>;
+        };   
+        combo_todo {
+            timeout-ms = <50>;
+            key-positions = <5 15>;
+            bindings = <&macro_todo>;
+            layers = <0>;
+        };   
+        combo_bt0 {
+            timeout-ms = <50>;
+            key-positions = <0 37 41>;
+            bindings = <&bt BT_SEL 0>;
+            layers = <5>;
+        };   
+        combo_bt1 {
+            timeout-ms = <50>;
+            key-positions = <0 31 37>;
+            bindings = <&bt BT_SEL 1>;
+            layers = <5>;
+        };   
+        combo_bt2 {
+            timeout-ms = <50>;
+            key-positions = <0 32 37>;
+            bindings = <&bt BT_SEL 2>;
+            layers = <5>;
+        };   
+        combo_bt3 {
+            timeout-ms = <50>;
+            key-positions = <0 33 37>;
+            bindings = <&bt BT_SEL 3>;
+            layers = <5>;
+        };   
+        combo_bt4 {
+            timeout-ms = <50>;
+            key-positions = <0 19 37>;
+            bindings = <&bt BT_SEL 4>;
+            layers = <5>;
+        };   
+        combo_BtClr {
+            timeout-ms = <50>;
+            key-positions = <21 27 37>;
+            bindings = <&bt BT_CLR>;
+            layers = <5>;
+        };    
 };
 
 };
