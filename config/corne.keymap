@@ -218,8 +218,8 @@
             layers = <0>;
         };   
         combo_lock {
-            timeout-ms = <50>;
-            key-positions = <0 5 21 38>;
+            timeout-ms = <100>;
+            key-positions = <6 21 39>;
             bindings = <&tog 4>;
         };   
         combo_LeftBackSpace {
@@ -235,37 +235,37 @@
             layers = <0>;
         };   
         combo_bt0 {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <0 37 41>;
             bindings = <&bt BT_SEL 0>;
             layers = <5>;
         };   
         combo_bt1 {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <0 31 37>;
             bindings = <&bt BT_SEL 1>;
             layers = <5>;
         };   
         combo_bt2 {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <0 32 37>;
             bindings = <&bt BT_SEL 2>;
             layers = <5>;
         };   
         combo_bt3 {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <0 33 37>;
             bindings = <&bt BT_SEL 3>;
             layers = <5>;
         };   
         combo_bt4 {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <0 19 37>;
             bindings = <&bt BT_SEL 4>;
             layers = <5>;
         };   
         combo_BtClr {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <21 27 37>;
             bindings = <&bt BT_CLR>;
             layers = <5>;
