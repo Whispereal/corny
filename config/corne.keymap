@@ -277,6 +277,12 @@
             bindings = <&kp ENTER>;
             layers = <0>;
         };    
+        combo_LeftDelete {   //左手删除  D+E
+            timeout-ms = <50>;
+            key-positions = <3 15>;
+            bindings = <&kp DEL>;
+            layers = <0>;
+        };     
 };
 
 };
