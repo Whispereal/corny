@@ -13,7 +13,7 @@
         
 
     macros {
-        macro_underscore: macro_underscore {
+        macro_underscore: macro_underscore {    //ASCII码下划线宏
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -22,7 +22,7 @@
                 , <&macro_release &kp LALT &mo 1>
                 ;
         };
-        macro_multiply: macro_multiply {
+        macro_multiply: macro_multiply {    //ASCII码乘号宏
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -31,7 +31,7 @@
                 , <&macro_release &kp LALT &mo 1>
                 ;
         };      
-        macro_todo: macro_todo {
+            macro_todo: macro_todo {    //todo list 宏
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -128,114 +128,114 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_tab {
+        combo_tab { //A+S=Tab
             timeout-ms = <50>;
             key-positions = <13 14>;
             bindings = <&kp TAB>;
             layers = <0>;
         };
-        combo_underscore {
+        combo_underscore {  //B+N=_ (通过ASCII码的宏实现，宏定义见文件开头)
             timeout-ms = <50>;
             key-positions = <29 30>;
             bindings = <&macro_underscore>;
             layers = <0>;
         };
-        combo_minus {
+        combo_minus {   //G+H=-
             timeout-ms = <50>;
             key-positions = <17 18>;
             bindings = <&kp KP_MINUS>;
             layers = <0>;
         };       
-        combo_LeftBrace {
+        combo_LeftBrace {   //V+B={
             timeout-ms = <50>;
             key-positions = <28 29>;
             bindings = <&kp LBRC>;
             layers = <0>;
         };    
-        combo_RightBrace {
+        combo_RightBrace {  //N+M=}
             timeout-ms = <50>;
             key-positions = <30 31>;
             bindings = <&kp RBRC>;
             layers = <0>;
         };        
-        combo_LeftParenthesis {
+        combo_LeftParenthesis { //F+G=(
             timeout-ms = <50>;
             key-positions = <16 17>;
             bindings = <&kp LPAR>;
             layers = <0>;
         };          
-        combo_RightParenthesis {
+        combo_RightParenthesis {    //H+J=)
             timeout-ms = <50>;
             key-positions = <18 19>;
             bindings = <&kp RPAR>;
             layers = <0>;
         };   
-        combo_LeftBracket {
+        combo_LeftBracket { //R+T=[
             timeout-ms = <50>;
             key-positions = <4 5>;
             bindings = <&kp LBKT>;
             layers = <0>;
         };    
-        combo_RightBracket {
+        combo_RightBracket {    //Y+U=]
             timeout-ms = <50>;
             key-positions = <6 7>;
             bindings = <&kp RBKT>;
             layers = <0>;
         };
-        combo_equal {
+        combo_equal {   //"/?"+"\|"="="(默认层和数字层均生效)
             timeout-ms = <50>;
             key-positions = <34 35>;
             bindings = <&kp EQUAL>;
             layers = <0 1>;
         };  
-        combo_dot {
+        combo_dot { //".>"+"/?"="."(仅在数字层生效)
             timeout-ms = <50>;
             key-positions = <33 34>;
             bindings = <&kp KP_DOT>;
             layers = <1>;
         };                   
-        combo_tilde {
+        combo_tilde {   //T+Y=_或——(根据输入法状态输出不同)
             timeout-ms = <50>;
             key-positions = <5 6>;
             bindings = <&kp UNDER>;
             layers = <0>;
         };     
-        combo_grave {
+        combo_grave {   //esc+Q=`或~
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp GRAVE>;
             layers = <0>;
         };    
-        combo_caps {
+        combo_caps {    //alt+A=CAPS
             timeout-ms = <50>;
             key-positions = <12 13>;
             bindings = <&kp CAPS>;
             layers = <0>;
         };   
-        combo_multiply {
+        combo_multiply {    //;+'=乘号（通过ASCII码宏实现）
             timeout-ms = <50>;
             key-positions = <22 23>;
             bindings = <&macro_multiply>;
             layers = <0>;
         };   
-        combo_lock {
+        combo_lock {    //Y+L+ENTER=锁定键盘（只能再次按该组合键退出）
             timeout-ms = <100>;
             key-positions = <6 21 39>;
             bindings = <&tog 4>;
         };   
-        combo_LeftBackSpace {
+        combo_LeftBackSpace {   //B+S=Backspace(左手退格键)
             timeout-ms = <50>;
             key-positions = <14 29>;
             bindings = <&kp BSPC>;
             layers = <0>;
         };   
-        combo_todo {
+        combo_todo {    //T+D=Markdown中todo list快捷键
             timeout-ms = <50>;
             key-positions = <5 15>;
             bindings = <&macro_todo>;
             layers = <0>;
         };   
-        combo_bt0 {
+        combo_bt0 {     //先按住B进入蓝牙层，然后同时按ESC+左手切层键+右手数字键切换蓝牙配置文件
             timeout-ms = <100>;
             key-positions = <0 37 41>;
             bindings = <&bt BT_SEL 0>;
@@ -259,20 +259,20 @@
             bindings = <&bt BT_SEL 3>;
             layers = <5>;
         };   
-        combo_bt4 {
+        combo_bt4 {     //该文件暂无法使用，原因未知
             timeout-ms = <100>;
             key-positions = <0 19 37>;
             bindings = <&bt BT_SEL 4>;
             layers = <5>;
         };   
-        combo_BtClr {
+        combo_BtClr {   //清除当前蓝牙配置文件，先按住B进入蓝牙层，然后同时按C+左手切层键+L
             timeout-ms = <100>;
             key-positions = <21 27 37>;
             bindings = <&bt BT_CLR>;
             layers = <5>;
         };    
         combo_LeftEnter {   //左手回车 E+T
-            timeout-ms = <50>;
+            timeout-ms = <10>;
             key-positions = <3 5>;
             bindings = <&kp ENTER>;
             layers = <0>;
