@@ -63,9 +63,9 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans     &trans             &trans             &kp UP              &trans             &kp LBKT           &kp RBKT         &kp KP_N7    &kp KP_N8    &kp KP_N9    &trans          &trans
-   &trans        &trans             &kp LEFT           &kp DOWN            &kp RIGHT          &kp LPAR           &kp RPAR         &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp KP_MULTIPLY     &kp KP_PLUS
-   &kp LSHFT      &trans       &trans       &trans        &trans       &trans       &trans        &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp KP_DIVIDE       &kp KP_MINUS
+   &trans     &trans             &trans             &kp UP              &trans             &kp LBKT           &kp RBKT         &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_MULTIPLY          &trans
+   &trans        &trans             &kp LEFT           &kp DOWN            &kp RIGHT          &kp LPAR           &kp RPAR         &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp KP_MINUS     &kp KP_PLUS
+   &kp LSHFT      &trans       &trans       &trans        &trans       &trans       &trans        &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp KP_DIVIDE       &kp KP_DOT
                           	&kp LCTRL     &trans       &kp SPACE        &kp RET            &trans             &kp KP_N0
                         >;
                 };
@@ -188,12 +188,12 @@
             bindings = <&kp EQUAL>;
             layers = <0 1>;
         };  
-        combo_dot { //".>"+"/?"="."(仅在数字层生效)
+/*         combo_dot { //".>"+"/?"="."(仅在数字层生效)
             timeout-ms = <50>;
             key-positions = <33 34>;
             bindings = <&kp KP_DOT>;
             layers = <1>;
-        };                   
+        };   */                 
         combo_tilde {   //T+Y=_或——(根据输入法状态输出不同)
             timeout-ms = <50>;
             key-positions = <5 6>;
