@@ -277,9 +277,9 @@
             bindings = <&bt BT_CLR>;
             layers = <5>;
         };    
-        combo_LeftEnter {   //左手回车 E+T
-            timeout-ms = <10>;
-            key-positions = <3 5>;
+        combo_LeftEnter {   //左手回车 W+E+R
+            timeout-ms = <50>;
+            key-positions = <2 3 4>;
             bindings = <&kp ENTER>;
             layers = <0>;
         };    
