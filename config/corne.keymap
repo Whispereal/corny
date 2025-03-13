@@ -229,6 +229,13 @@
             key-positions = <6 21 39>;
             bindings = <&tog 4>;
         };   
+
+        combo_num {    //左手切层键+S+Z=切到第1层数字层（只能再次按该组合键退出）
+            timeout-ms = <100>;
+            key-positions = <14 25 37>;
+            bindings = <&tog 1>;
+        };   
+
         combo_LeftBackSpace {   //B+S=Backspace(左手退格键)
             timeout-ms = <50>;
             key-positions = <14 29>;
